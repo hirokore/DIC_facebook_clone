@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
-  get 'sessions/new'
-  get 'picture_blogs/new'
-  get 'picture_blogs/index'
-  get 'picture_blogs/show'
-  get 'picture_blogs/edit'
-  get 'picture_blogs/confirm'
   root 'users#new'
-  resources :users
+  resources :users, only: [:new, :create, :show]
+  resources :sessions, only: [:new, :create, :destroy]
+  resources :picture_blogs do
+    collection do
+      post :confirm
+    end
+  end
 end
