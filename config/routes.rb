@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
   get 'users/mew'
-  root 'user#new'
+  root 'users#new'
 end
