@@ -19,6 +19,14 @@ class PictureBlogsController < ApplicationController
     end
   end
 
+  def update
+    if @picture_blog.update(picture_blog_params)
+      redirect_to picture_blogs_path, notice: "投稿できました！"
+    else
+      render :new
+    end
+  end
+
   def index
     @picture_blog = PictureBlog.all
   end
