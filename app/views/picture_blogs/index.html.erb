@@ -1,5 +1,28 @@
-<h1>PictureBlogs#index</h1>
-<p>Find me in app/views/picture_blogs/index.html.erb</p>
+<h1>投稿一覧</h1>
 
-<%= link_to "テスト的にアカウント登録へ", new_user_path%>
-<%= link_to "テスト的にアカウント登録へ", new_picture_blog_path%>
+<table>
+  <thead>
+    <tr>
+      <th>タイトル</th>
+      <th>本文</th>
+      <th>画像</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @picture_blog.each do |picture_blog| %>
+      <tr>
+        <td><%= picture_blog.title %></td>
+        <td><%= picture_blog.content %></td>
+        <td><%= picture_blog.image %></td>
+        <td><%= link_to 'Show', picture_blog %></td>
+        <td><%= link_to 'Edit', edit_picture_blog_path(picture_blog) %></td>
+        <td><%= link_to 'Destroy', picture_blog, method: :delete, data: { confirm: '本当に消してもいいですか？' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Feed', new_picture_blog_path %>
