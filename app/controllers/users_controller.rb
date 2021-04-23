@@ -7,12 +7,17 @@ class UsersController < ApplicationController
     @user = User.new(params_user)
     if @user.save
       # ログインもする機能
-      redirect_to new_user_path, notice: "ユーザが作成されました！"
+      redirect_to user_path, notice: "ユーザが作成されました！"
     else
       render :new
     end
   end
   
+  def show
+    @users = User.find(params[:id])
+  end
+  
+
   private
 
   def params_user
