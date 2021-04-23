@@ -3,6 +3,7 @@
 <table>
   <thead>
     <tr>
+      <th>投稿者</th>
       <th>タイトル</th>
       <th>本文</th>
       <th>画像</th>
@@ -12,6 +13,7 @@
   <tbody>
     <% @picture_blog.each do |picture_blog| %>
       <tr>
+        <td><%= picture_blog.user.name %></td>
         <td><%= picture_blog.title %></td>
         <td><%= picture_blog.content %></td>
         <td><%= picture_blog.image %></td>
