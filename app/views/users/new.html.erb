@@ -4,7 +4,7 @@
 		<h2><%= pluralize(@user.errors.count, "error") %>件のエラーより <%= @user.name %> が登録されませんでした。</h2>
 		<ul>
 		<% @user.errors.full_messages.each do |message| %>
-			<li><%= message %></li>
+      <li><%= message %></li>
 		<% end %>
 		</ul>
 	</div>
@@ -16,8 +16,8 @@
     <%= f.text_field :name %><br>
   </li>
   <li>
-  	<%= f.label "メールアドレス：" %><br>
-	  <%= f.text_field :email %><br>
+    <%= f.label "メールアドレス：" %><br>
+    <%= f.text_field :email %><br>
   </li>
   <li>
     <%= f.label "パスワード："  %><br>
