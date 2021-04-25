@@ -39,6 +39,8 @@ class PictureBlogsController < ApplicationController
 
   def confirm
     @picture_blog = PictureBlog.new(picture_blog_params)
+    @picture_blog.user_id = current_user.id
+    render :new if @picture_blog.invalid?
   end
 
   def destroy
