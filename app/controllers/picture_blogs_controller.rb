@@ -35,6 +35,7 @@ class PictureBlogsController < ApplicationController
   end
 
   def edit
+    redirect_to picture_blogs_path, notice: "不正操作を記録しました。" unless current_user.id == @picture_blog.id
   end
 
   def confirm
