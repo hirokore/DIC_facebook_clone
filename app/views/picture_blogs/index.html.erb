@@ -17,9 +17,9 @@
         <td><%= picture_blog.title %></td>
         <td><%= picture_blog.content %></td>
         <td><%= picture_blog.image %></td>
-        <td><%= link_to 'Show', picture_blog %></td>
-        <td><%= link_to 'Edit', edit_picture_blog_path(picture_blog) %></td>
-        <td><%= link_to 'Destroy', picture_blog, method: :delete, data: { confirm: '本当に消してもいいですか？' } %></td>
+        <td><%= link_to '詳細', picture_blog %></td>
+        <td><%= link_to '編集', edit_picture_blog_path(picture_blog) %></td>
+        <td><%= link_to '削除', picture_blog, method: :delete, data: { confirm: '本当に消してもいいですか？' } %></td>
       </tr>
     <% end %>
   </tbody>
