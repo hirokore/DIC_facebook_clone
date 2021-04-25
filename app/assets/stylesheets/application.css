@@ -14,9 +14,20 @@
  *= require_self
  */
 
+body , html {
+  padding:0; /*　追加*/
+  margin:0; /*　追加*/
+  height: 100%;
+}
 
 header {
   padding: 1rem 2rem;
+  border-left: 5px dotted #000;
+  background: #f4f4f4;
+}
+
+footer {
+  font-size: small;
   border-left: 5px dotted #000;
   background: #f4f4f4;
 }
