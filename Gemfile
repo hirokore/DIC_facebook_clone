@@ -12,24 +12,31 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'carrierwave', '~> 2.0'
 gem 'mini_magick'
 gem 'bcrypt'
-gem 'better_errors'
-gem 'binding_of_caller'
+
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'binding_of_caller'
+  gem 'pry-rails'
+  gem 'better_errors'
+  gem 'spring'
+  gem 'rspec-rails'
+  gem 'spring-commands-rspec'
+  gem 'factory_bot_rails'
+  gem 'faker'
+  gem 'launchy'
 end
 
 group :development do
-  gem 'web-console', '>= 3.3.0'
+  gem 'web-console', '~> 2.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
-  gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
 group :test do
-  gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
-  gem 'chromedriver-helper'
+  gem 'capybara', '~> 2.13'
+  gem 'webdrivers'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
